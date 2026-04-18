@@ -2,3 +2,8 @@ export { BrandLogo } from "./BrandLogo";
 export { Button } from "./Button";
 export { Card } from "./Card";
 export { Header } from "./Header";
+export { Hero } from "./Hero";
+export { FeatureRow } from "./FeatureRow";
+export { ProductsGrid } from "./ProductsGrid";
+export { CTASection } from "./CTASection";
+export { Footer } from "./Footer";

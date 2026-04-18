@@ -1,11 +1,12 @@
+"use client";
+
 import { BrandLogo } from "./BrandLogo";
-import { Button } from "./Button";
 
 const navLinks = [
-  { label: "שירותים", href: "#services" },
-  { label: "מוצרים", href: "#products" },
-  { label: "אודות", href: "#about" },
-  { label: "צור קשר", href: "#contact" },
+  { id: "services", label: "שירותים" },
+  { id: "products", label: "מוצרים" },
+  { id: "about", label: "אודות" },
+  { id: "contact", label: "צור קשר" },
 ];
 
 export function Header() {
@@ -17,18 +18,18 @@ export function Header() {
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
-              key={link.href}
-              href={link.href}
-              className="text-gray-300 hover:text-white transition-colors duration-150"
+              key={link.id}
+              href={`#${link.id}`}
+              className="text-[#CBD5E1] hover:text-white text-sm font-medium transition-colors duration-150"
             >
               {link.label}
             </a>
           ))}
         </nav>
 
-        <Button variant="secondary" size="sm">
+        <button className="bg-[#F5A623] hover:bg-[#D4891A] text-white border-none px-[18px] py-2 rounded-md font-medium text-sm cursor-pointer transition-colors duration-150">
           התחל עכשיו
-        </Button>
+        </button>
       </div>
     </header>
   );
